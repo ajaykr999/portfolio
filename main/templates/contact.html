@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="contct">
+    <h1>Contact Me</h1>
+
+    <h3>Connect with me:</h3>
+
+    <p>Email: ajaykr27052003@gmail.com</p>
+    <p>Phone:+918540084034</p>  
+
+    <a href="https://github.com/ajaykr999" target="_blank">GitHub Profile</a>
+    <a href="https://www.linkedin.com/in/ajay-kumar-2b38212a5" target="_blank">LinkedIn Profile</a>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+{% endblock %}

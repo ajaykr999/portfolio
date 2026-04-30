@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}PORTFOLIO{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <img src="{% static 'images/profile.jpg.jpg' %}" alt="Ajay">
+
+    <h1>Hi, I'm Ajay Kumar</h1>
+    <h3>Frontend Developer | Python Full Stack Developer | Django Developer</h3>
+
+    <p>I build clean, modern and user-friendly websites.</p>
+
+    <a href="/projects/" class="btn">View My Work</a>
+</section>
+
+<a href="{% static 'files/AJAY.RESUME.pdf' %}" target="_blank">
+    <button id="resumeBtn">View Resume</button>
+</a>
+
+{% endblock %}

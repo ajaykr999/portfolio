@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="about-container">
+
+     
+    <div class="profile-img">
+        <img src="{% static 'images/profile.jpg.jpg' %}" alt="Ajay Kumar">
+    </div>
+
+    <!-- About Content -->
+    <h1>About Me</h1>
+
+    <p>
+    Hello, I'm Ajay Kumar, a dedicated Python Full Stack Learner with a strong interest in frontend development.
+
+    I have hands-on experience with HTML, CSS, and Django, and I enjoy creating clean and user-friendly web interfaces.
+
+    I am continuously learning and building projects to improve my skills and grow as a professional developer.
+    </p>
+
+    
+    
+    <br>
+    <h3>Skills:</h3>
+    <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>ReactJs</li>
+        <li>SQL</li>
+        <li>Tailwind</li>
+        <li>Bootstrap</li>
+        <li>Django</li>
+    </ul>
+
+</div>
+
+<div class="contct">
+    <a href="https://github.com/ajaykr999" 
+    target="_blank">
+       <img src="{% static 'images/gitHub.jfif' %}" alt="lindin logo">
+    </a>
+    <a href="https://www.linkedin.com/in/ajay-kumar-2b38212a5" 
+    target="_blank">
+         <img src="{% static 'images/download (13).jfif' %}" alt="linkdin logo">
+    </a>
+</div>
+{% endblock %}
+</body>
+</html>

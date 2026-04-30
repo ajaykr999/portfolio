@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="projects">
+    <h1>My Projects</h1>
+    <h3>Student CRUD App</h3>
+
+    <p>Developed a CRUD-based Student Management System using Django.
+The project allows users to create, read, update, and delete student records through a clean and simple interface.
+I worked on handling form submissions, database integration, and improving the overall user experience.
+</p>
+<img src="{% static 'images/crud.png' %}" alt="CRUD Project Screenshot">
+</div>
+
+<div class="port">
+    <h3>Portfolio Website</h3>
+    <p>Portfolio Website
+
+Built a responsive portfolio website using Django, HTML, and CSS to present my projects and skills.
+Implemented multiple pages like Home, About, Projects, and Contact using Django templates and routing.
+Focused on clean UI design, proper layout structure, and smooth navigation across the website.
+ </p>
+ <img src="{% static 'images/port.png' %}" alt="CRUD Project Screenshot">
+
+</div>
+
+{% endblock %}
