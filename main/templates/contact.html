@@ -14,13 +14,23 @@
     <a href="https://www.linkedin.com/in/ajay-kumar-2b38212a5" target="_blank">LinkedIn Profile</a>
 
     <form method="POST">
-        {% csrf_token %}
-        
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        
-        <button type="submit">Send Message</button>
-    </form>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send Message</button>
+</form>
 </div>
+
+
+{% if success %}
+<p style="color: #22c55e; text-align: center; margin-bottom: 16px;">
+    ✅ Message sent successfully!
+</p>
+{% endif %}
+{% if messages %}
+    {% for msg in messages %}
+        <p style="color: #22c55e; text-align: center;">{{ msg }}</p>
+    {% endfor %}
+{% endif %}
+
+ 
 {% endblock %}

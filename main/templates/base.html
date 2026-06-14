@@ -3,7 +3,6 @@
 <html>
 <head>
     <title>{% block title %}Portfolio{% endblock %}</title>
-
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -19,11 +18,13 @@
 </div>
 
 <!-- Dynamic Content -->
-{% block content %}
-{% endblock %}
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
 
 <!-- Footer -->
-<footer style="text-align:center; padding:20px;">
+<footer>
     <p>© 2026 Ajay Kumar</p>
 </footer>
 
