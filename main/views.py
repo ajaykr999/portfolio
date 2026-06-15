@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
+from models import ContactMessage
+from main.models import ContactMessage
 from .forms import ContactForm
-from django.core.mail import send_mail
+# from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 
@@ -45,20 +47,15 @@ def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            name    = form.cleaned_data['name']
-            email   = form.cleaned_data['email']
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
             message = form.cleaned_data['message']
 
-            try:
-                send_mail(
-                    subject=f'Portfolio Message from {name}',
-                    message=f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}',
-                    from_email=settings.EMAIL_HOST_USER,
-                    recipient_list=['ajaykr27052003@gmail.com'],
-                )
-                print("✅ Email sent successfully!")
-            except Exception as e:
-                print(f"❌ Email error: {e}")
+            ContactMessage.objects.create(
+                name=name,
+                email=email,
+                message=message
+            )
 
             messages.success(request, '✅ Message sent successfully!')
             return redirect('contact')
